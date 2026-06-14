@@ -182,7 +182,7 @@ class WorkoutNotifier extends StateNotifier<WorkoutState> {
         }
       }
     }
-    history.sort((a, b) => b['date'].compareTo(a['date']));
+    history.sort((a, b) => (b['date'] as String).compareTo(a['date'] as String));
     return history;
   }
 }

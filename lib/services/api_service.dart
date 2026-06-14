@@ -159,9 +159,8 @@ class ApiService {
   // ── User Data ─────────────────────────────────────────────
   Future<Map<String, dynamic>?> fetchUserData(String uid) async {
     final res = await _post({'action': 'FETCH_USER_DATA', 'uid': uid});
-    return res?['ok'] == true
-        ? res?['data'] as Map<String, dynamic>?
-        : null;
+    if (res == null || res['ok'] != true) return null;
+    return res['data'] as Map<String, dynamic>?;
   }
 
   Future<List<Map<String, dynamic>>?> fetchAllUsers() async {
@@ -172,9 +171,8 @@ class ApiService {
 
   Future<Map<String, dynamic>?> fullSyncPull(String uid) async {
     final res = await _post({'action': 'FULL_SYNC_PULL', 'uid': uid});
-    return res?['ok'] == true
-        ? res?['data'] as Map<String, dynamic>?
-        : null;
+    if (res == null || res['ok'] != true) return null;
+    return res['data'] as Map<String, dynamic>?;
   }
 
   Future<bool> pushData(Map<String, dynamic> payload) async {
@@ -256,9 +254,8 @@ class ApiService {
   Future<Map<String, dynamic>?> fetchPinnedMessage(String roomId) async {
     final res =
         await _post({'action': 'GET_PINNED', 'roomId': roomId});
-    return res?['ok'] == true
-        ? res?['pinned'] as Map<String, dynamic>?
-        : null;
+    if (res == null || res['ok'] != true) return null;
+    return res['pinned'] as Map<String, dynamic>?;
   }
 
   // ── Subscription ──────────────────────────────────────────

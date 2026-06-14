@@ -50,7 +50,7 @@ class ExerciseLog {
 
   int? get totalVolume => sets.isEmpty
       ? null
-      : sets.fold(0, (sum, s) => sum + (s.weight * s.reps).toInt());
+      : sets.fold<int>(0, (sum, s) => sum + (s.weight * s.reps).toInt());
 
   factory ExerciseLog.fromJson(Map<String, dynamic> j) => ExerciseLog(
     name:     j['name']?.toString()   ?? '',
