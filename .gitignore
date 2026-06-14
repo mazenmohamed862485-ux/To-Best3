@@ -1,0 +1,57 @@
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Android
+android/local.properties
+android/key.properties
+*.jks
+*.keystore
+android/.gradle
+android/captures/
+android/gradlew
+android/gradlew.bat
+android/gradle/
+android/app/debug/
+
+# iOS
+ios/.symlinks/
+ios/Pods/
+ios/Flutter/.last_build_id
+
+# macOS
+macos/Flutter/GeneratedPluginRegistrant.swift
+
+# Generated l10n (can be regenerated)
+lib/l10n/
+
+# Environment / secrets
+.env
+.env.*
+key.properties
+release.keystore
+*.p12
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+
+# Debug info (obfuscation)
+build/debug-info/
